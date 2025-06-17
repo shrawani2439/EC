@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Products | My E-Shop</title>
     <style>
-        /* General Reset */
         * {
             margin: 0;
             padding: 0;
@@ -138,13 +137,13 @@
 <header>
     <div class="logo">🛍️ MyShop</div>
     <nav>
-        <a href="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/index.html">Home</a>
-        <a href="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/products.html">Products</a>
-        <a href="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/cart.html">Cart</a>
-        <a href="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/login.html">Login</a>
-        <a href="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/register.html">Register</a>
-        <a href="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/about.html">About</a>
-        <a href="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </nav>
 </header>
 
@@ -156,130 +155,58 @@
         <select id="categoryFilter">
             <option value="all">All Categories</option>
             <option value="keychain">Keychain</option>
-            <option value="headphones">Eletronice device</option>
-            <option value="clothes">Clothes</option>
-            <option value="devices">Shoose</option>
+            <option value="headphones">Headphones</option>
+            <option value="Books">Books</option>
+            <option value="devices">Devices</option>
         </select>
     </div>
 
     <div class="product-grid">
         <div class="product-card" data-category="keychain">
-            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ2BhPxHrX1cjKQ-QoBjCX2nZ_V9_v9Mgh4PayU_jonH1sjjkEaTY3jOQdzre2HeU79WBXsmgOTQfEXkOWof_pW9QgdIHtBJ620xmb2LaY8Auyx6l0HojPnlCY" alt="Keychain">
-            <h3> naruto Keychain</h3>
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ2BhPxHrX1cjKQ-QoBjCX2nZ_V9_v9Mgh4PayU_jonH1sjjkEaTY3jOQdzre2HeU79WBXsmgOTQfEXkOWof_pW9QgdIHtBJ620xmb2LaY8Auyx6l0HojPnlCY" alt="Naruto Keychain">
+            <h3>Naruto Keychain</h3>
             <p class="price">₹799</p>
             <button>Add to Cart</button>
-            </div>
-        
+        </div>
+
         <div class="product-card" data-category="keychain">
-            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQo5XVa9odexifLREkIiDjDJXTQxEJx0WSML-T2oe2vFLlhajWwoiI3L3flefOh3hUn9a7pX7Xzt28WoTk_DRZMFuTg1Cdb9qmzdVuZcUt3ghV91IXylQrT" alt="Keychain">
-            <h3> Sanrio  Keychain</h3>
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQo5XVa9odexifLREkIiDjDJXTQxEJx0WSML-T2oe2vFLlhajWwoiI3L3flefOh3hUn9a7pX7Xzt28WoTk_DRZMFuTg1Cdb9qmzdVuZcUt3ghV91IXylQrT" alt="Sanrio Keychain">
+            <h3>Sanrio Keychain</h3>
             <p class="price">₹899</p>
             <button>Add to Cart</button>
         </div>
 
         <div class="product-card" data-category="keychain">
-            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRJkS0g7VT4Q9KlOTUQSl5-1SRANM_rh1skxWNIS6pAnhFwJKPvSAzxIppZSLPGC7CNUTF16Oe0TRC4B46HIrOB6hBjQ3Vb9GayIhlhPtdrCUYcIhGWWU0F3A" alt="Keychain">
-            <h3> Flower  Keychain</h3>
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRJkS0g7VT4Q9KlOTUQSl5-1SRANM_rh1skxWNIS6pAnhFwJKPvSAzxIppZSLPGC7CNUTF16Oe0TRC4B46HIrOB6hBjQ3Vb9GayIhlhPtdrCUYcIhGWWU0F3A" alt="Flower Keychain">
+            <h3>Flower Keychain</h3>
             <p class="price">₹1,799</p>
             <button>Add to Cart</button>
         </div>
 
         <div class="product-card" data-category="headphones">
-            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ6L3_cfi8KfKI4DMiqK5UMCfLbgPlcVAAgImCj775dRvkVLi8Cej0gnt6pntWtFtSWWF3EvLRlcadKohc84DHdRmUoA7NeAcQqmNm4ln_k" alt="Headphones">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ6L3_cfi8KfKI4DMiqK5UMCfLbgPlcVAAgImCj775dRvkVLi8Cej0gnt6pntWtFtSWWF3EvLRlcadKohc84DHdRmUoA7NeAcQqmNm4ln_k" alt="Stylish Headphones">
             <h3>Stylish Headphones</h3>
             <p class="price">₹999</p>
             <button>Add to Cart</button>
         </div>
 
         <div class="product-card" data-category="headphones">
-            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRK4QZ3Y5m1DR6TZrM6_xn3a2Zyr65oBSmhzJnFdQ3WAAVcatwBMu5s5C4GDyhiuNM6o8OOTZSxnO0y9aoDch6kEnxJCPggZPNR0H-qgnUoK2wfhkLDS0z06w" alt="Headphones">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRK4QZ3Y5m1DR6TZrM6_xn3a2Zyr65oBSmhzJnFdQ3WAAVcatwBMu5s5C4GDyhiuNM6o8OOTZSxnO0y9aoDch6kEnxJCPggZPNR0H-qgnUoK2wfhkLDS0z06w" alt="Black Headphones">
             <h3>Black Headphones</h3>
             <p class="price">₹1,599</p>
             <button>Add to Cart</button>
         </div>
 
         <div class="product-card" data-category="headphones">
-            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTr72KHf0TD-eOQvaO9vyr2baG7X-ICSmkIMw1fQMiqsFFzEw8jhKomMHp_nLcA-IQXQf5i8rpfClXwZjEVnu2w015leoRMHssp2c08QBED0FVPaO8KFDAi" alt="Headphones">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTr72KHf0TD-eOQvaO9vyr2baG7X-ICSmkIMw1fQMiqsFFzEw8jhKomMHp_nLcA-IQXQf5i8rpfClXwZjEVnu2w015leoRMHssp2c08QBED0FVPaO8KFDAi" alt="White Headphones">
             <h3>White Headphones</h3>
-            <p class="price">₹ 2,999</p>
+            <p class="price">₹2,999</p>
             <button>Add to Cart</button>
         </div>
 
         <div class="product-card" data-category="Books">
-            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRRKBVJvOW3oHoQSfTsnuVsG4SjVUnJoC7TGAwdUA2I5fzRl-a3SbwaZi6MoK5UL426YkbV-oYp9JLJRP4b3xv4_ZU1XpiepeisDm312fUcX_53ZnZ_XR5B" alt="Shirt">
-            <h3>Moby Dick Or The Whale Books</h3>
-            <p class="price">₹789</p>
-            <button>Add to Cart</button>
-        </div>
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRRKBVJvOW3oHoQSfTsnuVsG4SjVUnJoC7TGAwdUA2I5fzRl-a3SbwaZi6MoK5UL426YkbV-oYp9JLJRP4b3xv4_ZU1XpiepeisDm312fU_
 
-        <div class="product-card" data-category="Books">
-            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTcvb0f51eW_pvNsYklzPg-YiwRPa4NznYQg-IN4o86hJPVPyxPBIWsYomIh20hvhbvyj8BbonE5_R_5C2ae3IRccVDKgSHslnvsiSx4rfBgzXsIIskzJ9JCw" alt="Shirt">
-            <h3>The Setting Sun Books</h3>
-            <p class="price">₹889</p>
-            <button>Add to Cart</button>
-        </div>
+            
 
-        <div class="product-card" data-category="Books">
-            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQrIrLOfhK4XAmODf9rcs2MxDmeazw1DSCnJAFVvD72Ka3qKlN2FM_cBqxqt4h5rY4vy7_RaLdCPmsIexgqoRDG0jgY-lMz5bsghpXELiGvfSmB8HBR4de11us" alt="Shirt">
-            <h3>White Nights Books</h3>
-            <p class="price">₹1,899</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="product-card" data-category="devices">
-            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRO7vtg1p1Y7WpwS9dgm8gzp8XeqnuCl0ClzHhTIKQdDGbYXg4XFBmnLiCJomoyKiBi8oEww6FG1jo8kF1cLOIo4P2iCJB6T2XlM68t03W7IDDbRvCpsBgb0A" alt="Laptop">
-            <h3>Dell Pavilion Laptop</h3>
-            <p class="price">₹42,999</p>
-            <button>Add to Cart</button>
-        </div>
-        
-        <div class="product-card" data-category="devices">
-            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQdglNBltHGKQpDmYGE9Qp_R6w_4vDuugEZG999bw4MjV-H8-E3f1O8SPJlL00DraSs3xNFZ7FU7EIk-6OHrxhRv0f6cV0IKYmgkBBH27klyahX7Ze1QArnyw" alt="Laptop">
-            <h3>Bluetooth  Speaker</h3>
-            <p class="price">₹5,999</p>
-            <button>Add to Cart</button>
-        </div>
-        
-        <div class="product-card" data-category="devices">
-            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT4kUsJwZKdsaFI_ZryTPoC3zeWr6NvUhUoJ5SGS2-zXU8ULzVHLErRpu93l5LgqrTYAgRfDFwIC60mM-Mpxg8IC0JYOqqYak2f7cpNckLt9oDd9VCyOt30Vw" alt="Laptop">
-            <h3>Dell Latitude</h3>
-            <p class="price">₹52,999</p>
-            <button>Add to Cart</button>
-        </div>
-    </div>
-</section>
-
-<footer>
-    &copy; 2025 MyShop. All rights reserved.
-</footer>
-
-<script>
-    const searchInput = document.getElementById('searchInput');
-    const categoryFilter = document.getElementById('categoryFilter');
-    const productCards = document.querySelectorAll('.product-card');
-
-    function filterProducts() {
-        const searchQuery = searchInput.value.toLowerCase();
-        const selectedCategory = categoryFilter.value;
-
-        productCards.forEach(card => {
-            const title = card.querySelector('h3').textContent.toLowerCase();
-            const category = card.getAttribute('data-category');
-
-            const matchesSearch = title.includes(searchQuery);
-            const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
-
-            if (matchesSearch && matchesCategory) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    }
-
-    searchInput.addEventListener('input', filterProducts);
-    categoryFilter.addEventListener('change', filterProducts);
-</script>
-
-</body>
-</html>
+           
