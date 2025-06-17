@@ -205,8 +205,76 @@
         </div>
 
         <div class="product-card" data-category="Books">
-            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRRKBVJvOW3oHoQSfTsnuVsG4SjVUnJoC7TGAwdUA2I5fzRl-a3SbwaZi6MoK5UL426YkbV-oYp9JLJRP4b3xv4_ZU1XpiepeisDm312fU_
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRRKBVJvOW3oHoQSfTsnuVsG4SjVUnJoC7TGAwdUA2I5fzRl-a3SbwaZi6MoK5UL426YkbV-oYp9JLJRP4b3xv4_ZU1XpiepeisDm312fUcX_53ZnZ_XR5B" alt="Moby Dick Book">
+            <h3>Moby Dick Book</h3>
+            <p class="price">₹789</p>
+            <button>Add to Cart</button>
+        </div>
 
-            
+        <div class="product-card" data-category="Books">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTcvb0f51eW_pvNsYklzPg-YiwRPa4NznYQg-IN4o86hJPVPyxPBIWsYomIh20hvhbvyj8BbonE5_R_5C2ae3IRccVDKgSHslnvsiSx4rfBgzXsIIskzJ9JCw" alt="The Setting Sun Book">
+            <h3>The Setting Sun</h3>
+            <p class="price">₹889</p>
+            <button>Add to Cart</button>
+        </div>
 
-           
+        <div class="product-card" data-category="Books">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQrIrLOfhK4XAmODf9rcs2MxDmeazw1DSCnJAFVvD72Ka3qKlN2FM_cBqxqt4h5rY4vy7_RaLdCPmsIexgqoRDG0jgY-lMz5bsghpXELiGvfSmB8HBR4de11us" alt="White Nights Book">
+            <h3>White Nights</h3>
+            <p class="price">₹1,899</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-category="devices">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRO7vtg1p1Y7WpwS9dgm8gzp8XeqnuCl0ClzHhTIKQdDGbYXg4XFBmnLiCJomoyKiBi8oEww6FG1jo8kF1cLOIo4P2iCJB6T2XlM68t03W7IDDbRvCpsBgb0A" alt="Dell Pavilion Laptop">
+            <h3>Dell Pavilion Laptop</h3>
+            <p class="price">₹42,999</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-category="devices">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQdglNBltHGKQpDmYGE9Qp_R6w_4vDuugEZG999bw4MjV-H8-E3f1O8SPJlL00DraSs3xNFZ7FU7EIk-6OHrxhRv0f6cV0IKYmgkBBH27klyahX7Ze1QArnyw" alt="Bluetooth Speaker">
+            <h3>Bluetooth Speaker</h3>
+            <p class="price">₹5,999</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-category="devices">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT4kUsJwZKdsaFI_ZryTPoC3zeWr6NvUhUoJ5SGS2-zXU8ULzVHLErRpu93l5LgqrTYAgRfDFwIC60mM-Mpxg8IC0JYOqqYak2f7cpNckLt9oDd9VCyOt30Vw" alt="Dell Latitude">
+            <h3>Dell Latitude</h3>
+            <p class="price">₹52,999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 MyShop. All rights reserved.
+</footer>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const productCards = document.querySelectorAll('.product-card');
+
+    function filterProducts() {
+        const searchQuery = searchInput.value.toLowerCase();
+        const selectedCategory = categoryFilter.value;
+
+        productCards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const category = card.getAttribute('data-category');
+
+            const matchesSearch = title.includes(searchQuery);
+            const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+
+            card.style.display = matchesSearch && matchesCategory ? 'block' : 'none';
+        });
+    }
+
+    searchInput.addEventListener('input', filterProducts);
+    categoryFilter.addEventListener('change', filterProducts);
+</script>
+
+</body>
+</html>
