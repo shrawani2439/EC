@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart | My E-Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+      color: #fff;
+      padding: 40px;
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #f39c12;
+      margin-bottom: 30px;
+    }
+
+    .cart-container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #444;
+      padding: 10px 0;
+    }
+
+    .cart-item img {
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+      margin-right: 15px;
+    }
+
+    .cart-item-name {
+      flex: 1;
+      font-size: 16px;
+    }
+
+    .cart-item-price {
+      color: #f1c40f;
+      font-weight: bold;
+    }
+
+    .total {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #f39c12;
+    }
+
+    button {
+      display: block;
+      margin: 25px auto 0;
+      padding: 12px 30px;
+      font-size: 16px;
+      background-color: #f39c12;
+      border: none;
+      border-radius: 8px;
+      color: #1e1e2f;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e67e22;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your Shopping Cart</h1>
+  <div class="cart-container">
+    <div class="cart-item">
+      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcareflection.in%2Fproduct%2Fdemon-slayer-anime-inosuke-keychain%2F&psig=AOvVaw0LlGL5hrhuD8Uu0XxZozFx&ust=1750066331150000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCKigjb6P840DFQAAAAAdAAAAABAE" alt="Product">
+      <div class="cart-item-name">Naruto Keychain</div>
+      <div class="cart-item-price">₹799</div>
+    </div>
+
+    <div class="cart-item">
+      <img src="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/cart.html" alt="Product">
+      <div class="cart-item-name">Stylish headphones</div>
+      <div class="cart-item-price">₹999</div>
+    </div>
+
+    <div class="total">Total: ₹1,798</div>
+<a href="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/checkout.html
+">
+  <button>Proceed to Checkout</button>
+</a>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | My E-Shop</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            width: 350px;
+            backdrop-filter: blur(6px);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f1c40f;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #f39c12;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #e67e22;
+        }
+
+        .error {
+            color: #ff6b6b;
+            font-size: 14px;
+            display: none;
+            margin-top: -15px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h1>Login</h1>
+    <form onsubmit="return validatePassword()">
+        <label for="username">Username</label>
+        <input type="text" id="username" required placeholder="Enter your username">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required placeholder="At least 1 Upper, 1 Lower, 1 Number, 1 Symbol">
+        <div class="error" id="errorMsg">❌ Password must have upper, lower, number, and symbol!</div>
+
+       
+        <a href="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/dashboard.html">
+       
+  <button type="button">Login</button>
+</a>
+
+    </form>
+</div>
+
+<script>
+    function validatePassword() {
+        const password = document.getElementById("password").value;
+        const errorMsg = document.getElementById("errorMsg");
+
+        const hasUpper = /[A-Z]/.test(password);
+        const hasLower = /[a-z]/.test(password);
+        const hasNumber = /[0-9]/.test(password);
+        const hasSymbol = /[^A-Za-z0-9]/.test(password);
+
+        if (hasUpper && hasLower && hasNumber && hasSymbol) {
+            errorMsg.style.display = "none";
+            return true;
+        } else {
+            errorMsg.style.display = "block";
+            return false;
+        }
+    }
+</script>
+
+</b
+

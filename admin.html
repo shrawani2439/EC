@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel | My E-Shop</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1e1e2f;
+      color: #fff;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      animation: fadeIn 0.7s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .sidebar {
+      width: 220px;
+      background: #2c2f4a;
+      padding: 30px 20px;
+      box-shadow: 3px 0 10px rgba(0,0,0,0.4);
+    }
+
+    .sidebar h2 {
+      font-size: 22px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #f39c12;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px;
+      margin: 10px 0;
+      background: #3a3f5a;
+      text-decoration: none;
+      color: #f1f1f1;
+      border-radius: 6px;
+      transition: 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      background: #f39c12;
+      color: #1e1e2f;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .main-content h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #f1c40f;
+    }
+
+    .main-content p {
+      font-size: 16px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+    <a href="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/dashboard.html">Dashboard</a>
+    <a href="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/product_detail.html">Manage Products</a>
+     <a href="">Settings</a>
+    <a href="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/index.html">Logout</a>
+  </div>
+
+  <div class="main-content">
+    <h1>Welcome, Admin</h1>
+    <p>You can manage your e-commerce store's products, users, and settings here. Use the menu to the left to navigate.</p>
+  </div>
+
+</body>
+</html>
