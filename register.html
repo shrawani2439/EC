@@ -1,100 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Register | My E-Shop</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #2c3e50, #4b6584);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: #fff;
-      animation: fadeIn 0.6s ease-in;
-    }
+    <meta charset="UTF-8">
+    <title>Products | My E-Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #1e272e, #2f3640);
+            color: #fff;
+        }
 
-    .container {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-      max-width: 400px;
-      width: 100%;
-    }
+        header {
+            background-color: #0f0f0f;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    h2 {
-      text-align: center;
-      color: #f1c40f;
-      margin-bottom: 25px;
-    }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f0932b;
+        }
 
-    input[type="text"], input[type="email"], input[type="password"] {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
 
-    .btn {
-      width: 100%;
-      padding: 12px;
-      background-color: #f39c12;
-      color: #1e1e2f;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 15px;
-      transition: background 0.3s ease;
-    }
+        nav a:hover {
+            color: #f0932b;
+        }
 
-    .btn:hover {
-      background-color: #e67e22;
-    }
+        .products {
+            padding: 50px 20px;
+            text-align: center;
+        }
 
-    .login-link {
-      text-align: center;
-      margin-top: 15px;
-    }
+        .products h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
 
-    .login-link a {
-      color: #f1c40f;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        .product-controls {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-    .login-link a:hover {
-      text-decoration: underline;
-    }
-  </style>
+        #searchInput, #categoryFilter {
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            margin: 10px;
+            width: 200px;
+            font-size: 16px;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #3c3c3c;
+            border-radius: 16px;
+            padding: 20px;
+            width: 250px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            margin: 15px 0 5px;
+            font-size: 20px;
+            color: #dcdde1;
+        }
+
+        .price {
+            color: #f0932b;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-card button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #e67e22;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .product-card button:hover {
+            background-color: #d35400;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <h2>Create Account</h2>
-    <form action="/register" method="POST">
-      <input type="text" name="username" placeholder="Username" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="password" name="password" placeholder="Password (Min 8 characters, include symbol, number, A-Z, a-z)" 
-             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}" required>
-      <button type="button" class="btn" onclick="location.href='file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/products.html'">Register</button>
+<header>
+    <div class="logo">🛍️ MyShop</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    </form>
-    <div class="login-link">
-      Already have an account? <a href="file:///C:/Users/bambl/OneDrive/Documents/E-commerce/templates/login.html">Login here</a>
+<section class="products">
+    <h2>Our Featured Products</h2>
+
+    <div class="product-controls">
+        <input type="text" id="searchInput" placeholder="Search for products...">
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="keychain">Keychain</option>
+            <option value="headphones">Headphones</option>
+            <option value="Books">Books</option>
+            <option value="devices">Devices</option>
+        </select>
     </div>
-  </div>
+
+    <div class="product-grid">
+        <!-- Sample Keychain -->
+        <div class="product-card" data-category="keychain">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ2BhPxHrX1cjKQ-QoBjCX2nZ_V9_v9Mgh4PayU_jonH1sjjkEaTY3jOQdzre2HeU79WBXsmgOTQfEXkOWof_pW9QgdIHtBJ620xmb2LaY8Auyx6l0HojPnlCY" alt="Naruto Keychain">
+            <h3>Naruto Keychain</h3>
+            <p class="price">₹799</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Add more products here... (already added in your file, keep as-is) -->
+
+        <!-- Example: a headphones product -->
+        <div class="product-card" data-category="headphones">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ6L3_cfi8KfKI4DMiqK5UMCfLbgPlcVAAgImCj775dRvkVLi8Cej0gnt6pntWtFtSWWF3EvLRlcadKohc84DHdRmUoA7NeAcQqmNm4ln_k" alt="Stylish Headphones">
+            <h3>Stylish Headphones</h3>
+            <p class="price">₹999</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Example: a book -->
+        <div class="product-card" data-category="Books">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRRKBVJvOW3oHoQSfTsnuVsG4SjVUnJoC7TGAwdUA2I5fzRl-a3SbwaZi6MoK5UL426YkbV-oYp9JLJRP4b3xv4_ZU1XpiepeisDm312fUcX_53ZnZ_XR5B" alt="Moby Dick Book">
+            <h3>Moby Dick Book</h3>
+            <p class="price">₹789</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Example: a device -->
+        <div class="product-card" data-category="devices">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRO7vtg1p1Y7WpwS9dgm8gzp8XeqnuCl0ClzHhTIKQdDGbYXg4XFBmnLiCJomoyKiBi8oEww6FG1jo8kF1cLOIo4P2iCJB6T2XlM68t03W7IDDbRvCpsBgb0A" alt="Dell Pavilion Laptop">
+            <h3>Dell Pavilion Laptop</h3>
+            <p class="price">₹42,999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 MyShop. All rights reserved.
+</footer>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const productCards = document.querySelectorAll('.product-card');
+
+    function filterProducts() {
+        const searchQuery = searchInput.value.toLowerCase();
+        const selectedCategory = categoryFilter.value;
+
+        productCards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const category = card.getAttribute('data-category');
+
+            const matchesSearch = title.includes(searchQuery);
+            const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+
+            card.style.display = matchesSearch && matchesCategory ? 'block' : 'none';
+        });
+    }
+
+    searchInput.addEventListener('input', filterProducts);
+    categoryFilter.addEventListener('change', filterProducts);
+</script>
 
 </body>
 </html>
